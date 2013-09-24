@@ -1,0 +1,8 @@
+{
+  "name": "devproxy",
+  "version": "0.0.1",
+  "devDependencies": {
+    "http-server": "*",
+    "http-proxy": "*"
+  }
+}

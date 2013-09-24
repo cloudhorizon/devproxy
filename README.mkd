@@ -1,0 +1,40 @@
+# DevProxy
+
+Simple reverse proxy and HTTP server written in NodeJS using node-http-proxy
+and node-http-server.
+
+## Summary
+
+    node proxy.js BASE_DIR TARGET_URL ROOT_PATH
+
+### `BASE_DIR`
+
+The directory from which to serve the static files. Defaults to `www`.
+
+### `TARGET_URL`
+
+Full URL of the server to use as proxy target. Paths can be included and SSL is
+supported. Default is `http://localhost:9000/api`.
+
+### `ROOT_PATH`
+
+Local path on which the proxied server will be available. Default is to use
+whatever the path portion of `TARGET_URL` is.
+
+## Using the proxy
+
+First add the dependencies to your project's `package.json` file:
+
+    "devDependencies": {
+      ....
+      "http-server": "*",
+      "http-proxy": "*"
+    }
+
+Drop the `proxy.js` file anywhere in the project. Common location for this
+script is `tools` directory.
+
+## Volo target
+
+Take a look at `eample/volofile` for an example `serve` target that uses this
+script.

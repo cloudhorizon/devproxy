@@ -1,0 +1,21 @@
+/*jslint node: true */
+'use strict';
+
+var quietFlag = {'q': 'quiet'};
+
+var useConsole = function(namedArgs) {
+  return {useConsole: !namedArgs.quiet};
+};
+
+module.exports = {
+  serve: {
+    flags: quietFlag,
+    run: function(d, v, namedArgs) {
+      d.resolve(v.spawn(
+        'node',
+        ['tools/proxy.js'], 
+        useConsole(namedArgs)
+      ));
+    }  
+  }
+};
