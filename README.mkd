@@ -5,21 +5,26 @@ and node-http-server.
 
 ## Summary
 
-    node proxy.js BASE_DIR TARGET_URL ROOT_PATH
+    node proxy.js [FILE]
 
-### `BASE_DIR`
+### `FILE`
 
-The directory from which to serve the static files. Defaults to `www`.
+This argument is an optional configuration file that can be used to customize
+the defaults. The file should contain a single object with following optional 
+keys:
 
-### `TARGET_URL`
+ + `baseDir`: Base directory for static files (default: 'www')
+ + `target`: Target host to be proxied (default: 'http://localhost:80/api')
+ + `rootPath`: The path at which proxied host is accessed locally (default:
+   path portion of `target`)
+ + `port`: Port on which the proxy will listen (default: '8080')
 
-Full URL of the server to use as proxy target. Paths can be included and SSL is
-supported. Default is `http://localhost:9000/api`.
+The target host URL can use both http and https protocols. Currently username
+and password embedded in the URL will be ignored. Please use some other form of
+authentication if possible. The port and path are honored. The path portion
+will also be used as the default value of `rootPath`.
 
-### `ROOT_PATH`
-
-Local path on which the proxied server will be available. Default is to use
-whatever the path portion of `TARGET_URL` is.
+Example can be found in `example/proxy.json`.
 
 ## Using the proxy
 

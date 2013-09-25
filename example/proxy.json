@@ -1,0 +1,6 @@
+{
+  "target": "https://example.com:4500/api/v1/",
+  "port": 80,
+  "baseDir": "www-built",
+  "rootPath": "api"
+}

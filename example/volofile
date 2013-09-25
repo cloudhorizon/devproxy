@@ -10,10 +10,10 @@ var useConsole = function(namedArgs) {
 module.exports = {
   serve: {
     flags: quietFlag,
-    run: function(d, v, namedArgs) {
+    run: function(d, v, namedArgs, baseDir, target, rootPath, port) {
       d.resolve(v.spawn(
         'node',
-        ['tools/proxy.js'], 
+        ['../lib/proxy.js', 'proxy.json'], 
         useConsole(namedArgs)
       ));
     }  
