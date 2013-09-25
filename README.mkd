@@ -3,6 +3,11 @@
 Simple reverse proxy and HTTP server written in NodeJS using node-http-proxy
 and node-http-server.
 
+This server is meant for development use, but it is based on production-ready
+proxy server from NodeJitsu. It is capable of listening on port 80 and thus
+serving as a frontend server. It serves static files and has support for
+directory indexes.
+
 ## Summary
 
     node proxy.js [FILE]
@@ -52,3 +57,10 @@ script is `tools` directory.
 
 Take a look at `eample/volofile` for an example `serve` target that uses this
 script.
+
+## Known issues
+
+ + This server always listens on all interfaces. This is not (yet) 
+   configurable.
+ + The URLs returned from the target host are not rewritten.
+
