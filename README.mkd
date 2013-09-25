@@ -18,11 +18,19 @@ keys:
  + `rootPath`: The path at which proxied host is accessed locally (default:
    path portion of `target`)
  + `port`: Port on which the proxy will listen (default: '8080')
+ + `noLang`: Whether to not relay 'Accept-Language' header (default: false)
 
 The target host URL can use both http and https protocols. Currently username
 and password embedded in the URL will be ignored. Please use some other form of
 authentication if possible. The port and path are honored. The path portion
 will also be used as the default value of `rootPath`.
+
+The `noLang` option can be useful on misbehaving API servers that redirect to
+language-specific URL instead of responding to requests. If you detect that the
+responses are always redirects or HTTP 404 at wrong URL, try setting this
+option to true. It is generally safe to have this set to `true` on most API
+servers, since API servers are not supposed to honor the `Accept-Language`
+header anyway.
 
 Example can be found in `example/proxy.json`.
 
