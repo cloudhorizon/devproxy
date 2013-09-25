@@ -18,7 +18,8 @@ keys:
  + `rootPath`: The path at which proxied host is accessed locally (default:
    path portion of `target`)
  + `port`: Port on which the proxy will listen (default: '8080')
- + `noLang`: Whether to not relay 'Accept-Language' header (default: false)
+ + `noLang`: Whether to prevent relaying of the 'Accept-Language' header 
+   (default: false)
 
 The target host URL can use both http and https protocols. Currently username
 and password embedded in the URL will be ignored. Please use some other form of
