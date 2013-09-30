@@ -1,6 +1,17 @@
 {
-  "name": "devproxy",
-  "version": "0.0.1",
+  "name": "daproxy",
+  "description": "Reverse proxy and static server for local development",
+  "homepage": "https://bitbucket.org/cloudhorizon/devproxy",
+  "keywords": ["proxy", "server", "http", "local", "static", "development"],
+  "author": "Branko Vukelic <branko@brankovukelic.com>",
+  "bugs": {
+    "url": "https://bitbucket.org/cloudhorizon/devproxy/issues",
+    "email": "branko@brankovukelic.com"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://bitbucket.org/cloudhorizon/devproxy/raw/master/LICENSE"
+  },
   "bin": {
     "proxy": "./lib/proxy.js"
   },
@@ -8,5 +19,6 @@
     "http-server": "*",
     "http-proxy": "*",
     "optimist": "*"
-  }
+  },
+  "version": "0.0.1"
 }
