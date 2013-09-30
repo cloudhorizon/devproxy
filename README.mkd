@@ -8,9 +8,21 @@ proxy server from NodeJitsu. It is capable of listening on port 80 and thus
 serving as a frontend server. It serves static files and has support for
 directory indexes.
 
+## Installation
+
+Install directly from this repository:
+
+    npm install git@bitbucket.org:cloudhorizon/devproxy.git
+
 ## Summary
 
-    node proxy.js [FILE]
+    node proxy.js
+    node proxy.js [-c] FILE
+
+Run the following command to get more information about the relevant command
+line options:
+
+    node proxy.js -h
 
 ### `FILE`
 
@@ -40,23 +52,18 @@ header anyway.
 
 Example can be found in `example/proxy.json`.
 
-## Using the proxy
-
-First add the dependencies to your project's `package.json` file:
-
-    "devDependencies": {
-      ....
-      "http-server": "*",
-      "http-proxy": "*"
-    }
-
-Drop the `proxy.js` file anywhere in the project. Common location for this
-script is `tools` directory.
-
 ## Volo target
 
 Take a look at `eample/volofile` for an example `serve` target that uses this
 script.
+
+## Support
+
+This is an internal tool used at CloudHorizon. Although it is publicly
+accessible, and we generally support it for our own needs, don't expect to get
+support for it or anythhing along those lines. But reports are welcome, though,
+and we usually respond to them. Patches and pull requests are even more
+welcome.
 
 ## Known issues
 

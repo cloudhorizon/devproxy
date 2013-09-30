@@ -1,8 +1,12 @@
 {
   "name": "devproxy",
   "version": "0.0.1",
-  "devDependencies": {
+  "bin": {
+    "proxy": "./lib/proxy.js"
+  },
+  "dependencies": {
     "http-server": "*",
-    "http-proxy": "*"
+    "http-proxy": "*",
+    "optimist": "*"
   }
 }
