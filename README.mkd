@@ -17,10 +17,13 @@ Install directly from this repository:
 
     npm install daproxy
 
+This creates a `proxy` command that you can use to start the proxy.
+
 ## Summary
 
-    node proxy.js
-    node proxy.js [-c] FILE
+    proxy
+    proxy [-c] FILE
+    proxy [-p PORT] [-t TARGET] [-r ROOT_URL] [-s STATIC_DIR] [-n]
 
 Run the following command to get more information about the relevant command
 line options:
