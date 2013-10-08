@@ -49,6 +49,12 @@ and password embedded in the URL will be ignored. Please use some other form of
 authentication if possible. The port and path are honored. The path portion
 will also be used as the default value of `rootPath`.
 
+Since version 0.0.2, it is also possible to specify multiple targets and
+root paths. Use an array for each. When specifying multiple targets nad
+rootPaths, keep in mind that they are always paired, even though they are
+specified in separate keys. This is mostly for backwards compatibility of the
+configuration file format.
+
 The `noLang` option can be useful on misbehaving API servers that redirect to
 language-specific URL instead of responding to requests. If you detect that the
 responses are always redirects or HTTP 404 at wrong URL, try setting this
