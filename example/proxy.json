@@ -1,6 +1,12 @@
 {
-  "target": "https://example.com:4500/api/v1/",
   "port": 80,
   "baseDir": "www-built",
-  "rootPath": "api"
+  "target": [
+    "https://example.com:4500/api/v1/",
+    "http://example.com:4501/api/v1/"
+  ],
+  "rootPath": [
+    "api",
+    "api2"
+  ]
 }
