@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "http-server": "*",
-    "http-proxy": "*",
+    "http-proxy": "0.10.4",
     "optimist": "*"
   },
   "version": "0.0.5"
